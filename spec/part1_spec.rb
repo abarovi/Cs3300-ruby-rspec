@@ -6,15 +6,15 @@ describe 'Ruby intro part 1' do
   describe '#sum' do
 
     it 'returns correct sum [1 point]', points: 1 do
-      expect(sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer
-      expect(sum([1, 2, 3, 4, 5])).to eq(15)
-      expect(sum([1, 2, 3, 4, -5])).to eq(5)
-      expect(sum([1, 2, 3, 4, -5, 5, -100])).to eq(-90)
+      expect(sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer       #tests if the result of the sum is actually in integer after send the test array
+      expect(sum([1, 2, 3, 4, 5])).to eq(15)                     #tests if the result of the sum is the desired value of 15 after sending the test array
+      expect(sum([1, 2, 3, 4, -5])).to eq(5)                     #tests if the result of the sum is the desired value of 5 after sending the test array
+      expect(sum([1, 2, 3, 4, -5, 5, -100])).to eq(-90)          #tests if the result of the sum is the desired value of -90 after sending the test array
     end
 
     it 'works on the empty array [2 points]', points: 2 do
-      expect { sum([]) }.not_to raise_error
-      expect(sum([])).to be_zero
+      expect { sum([]) }.not_to raise_error                      #tests if an error is raised after a null array is sent
+      expect(sum([])).to be_zero                                 #tests if the desired value of 0 is the output after a null array
     end
   end
 
